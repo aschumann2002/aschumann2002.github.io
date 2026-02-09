@@ -1,0 +1,196 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  }
+
+/****************   Nav Section **********************/
+nav {
+  background-color: #333; /* Dark background for contrast */
+  color: white;
+  padding: 1rem;
+  display: flex; /* Makes it a flex parent */
+  justify-content: space-between; /* Pushes children to far left and right */
+  align-items: center;	
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	background-color: #333;
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  display: flex; /* Flex parent */
+  justify-content: center; /* Center children */
+  align-items: center;
+  gap: 15px; /* Adds space between LinkedIn icon */
+}
+
+/*********** Splash Page ************************/
+header {
+  text-align: center;
+  background-color: #f4f4f4; /* Light grey */
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-family: 'Roboto', sans-serif; 
+  color: #BA0C2F; /* UGA Red */
+  font-size: 2.5rem;  
+}
+
+header img {
+  width: 200px;      
+  height: 200px;       
+  object-fit: cover;   
+  border-radius: 15px; 
+  border: 5px solid #333;
+}
+
+.address {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/************* Sections ********************/
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 20px 0;
+}
+
+section h3 {
+  font-family: 'Roboto', sans-serif; /* Uses Google font */
+  color: #BA0C2F; /* (UGA Red) */
+  margin-bottom: 10px;
+}
+
+section dl {
+  display: grid; /* Uses grid layout for description lists */
+  grid-template-columns: 1fr auto; /* Name on left, date on right */
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* NEW SECTION - Dotted line between dt and dd */
+section dt {
+    font-weight: bold;
+    grid-column: 1;         /* Forces it to the left column */
+    display: flex;          /* Allows us to put the line next to the text */
+    align-items: baseline;  /* Aligns the dots with the text bottom */
+}
+
+/* NEW SECTION - Dotted line between dt and dd */
+section dt::after {
+    content: "";
+    flex-grow: 1;           /* Forces line to stretch across the empty space */
+    border-bottom: 2px dotted #ccc; /* Creates the dotted line */
+    margin: 0 10px;         /* Adds 10px of space on left and right of dots */
+}
+
+/* NEW SECTION - Dotted line between dt and dd */
+section dd {
+    margin: 0;
+    grid-column: 2;
+    text-align: right;
+}
+
+section ul {
+  list-style-type: square; /* Changes default bullet style */
+  padding-left: 20px;
+}
+
+section a {
+  color: #0066cc; /* Sets anchor text color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold;
+}
+
+section a:hover {
+  color: #BA0C2F; /* Changes color on hover */
+  text-decoration: underline; /* Adds underline on hover */
+}
+
+/************** Projects   *****************/
+.three-col {
+  display: grid; /* Creates the grid layout */
+  grid-template-columns: 1fr 1fr 1fr; /* Creates 3 equal columns */
+  gap: 20px; /* Adds space between cards */
+  margin-top: 15px;
+}
+
+.card img {
+  width: 100%; /* Positions image within card width */
+  height: 180px; /* Sets uniform height */
+  object-fit: cover; /* Prevents image distortion */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds shadow for visual separation */
+  padding: 15px;
+  text-align: center;
+}
+
+.card ul {
+    text-align: left;     /* Forces the text back to the left */
+    padding-left: 20px;  
+    margin-top: 10px;    
+}
+
+/************** Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      flex-direction: column; /* Changes orientation to vertical */
+      text-align: center;
+      gap: 15px;
+    }
+
+    .three-col {
+      grid-template-columns: 1fr; /* Changes grid to 1 column */
+    }
+}
+
+/************** Contact Page   *****************/
+.one-col {
+  max-width: 600px; 
+  margin: 0 auto; /* Centers the column */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%; /* Styles input width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%; /* Styles textarea width */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
