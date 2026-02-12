@@ -13,6 +13,13 @@ nav {
   align-items: center;	
 }
 
+/* NEW: Fixes the "purple/dark blue" issue */
+nav a {
+    color: #ADD8E6; /* Light Blue for better contrast on dark background */
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /***********************  Footer Section   **************************/
 footer {
 	background-color: #333;
@@ -23,6 +30,12 @@ footer {
   justify-content: center; /* Center children */
   align-items: center;
   gap: 15px; /* Adds space between LinkedIn icon */
+}
+
+/* NEW: Ensures footer links are also readable */
+footer a {
+    color: #ADD8E6; 
+    text-decoration: none;
 }
 
 /*********** Splash Page ************************/
@@ -67,6 +80,12 @@ hr {
   height: 1px;
   background: #333;
   margin: 20px 0;
+}
+
+/* NEW: Adds spacing between sections as suggested */
+section {
+    margin-bottom: 20px; /* "Unclusters" the info */
+    padding: 0 200px;     /* Adds a little breathing room on the sides */
 }
 
 section h3 {
